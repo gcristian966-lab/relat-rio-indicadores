@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório de Indicadores de Acidentes</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📊 Relatório de Indicadores de Acidentes</h1>
+  </header>
+
+  <section class="upload">
+    <p>Faça upload do CSV com seus dados:</p>
+    <input type="file" id="fileInput" accept=".csv" />
+  </section>
+
+  <section class="filters">
+    <label for="monthFilter">Mês:</label>
+    <select id="monthFilter">
+      <option value="todos">Todos</option>
+    </select>
+
+    <label for="sectorFilter">Setor:</label>
+    <select id="sectorFilter">
+      <option value="todos">Todos</option>
+    </select>
+
+    <label for="typeFilter">Tipo de Acidente:</label>
+    <select id="typeFilter">
+      <option value="todos">Todos</option>
+    </select>
+  </section>
+
+  <section class="charts">
+    <canvas id="chartLine"></canvas>
+    <canvas id="chartBar"></canvas>
+    <canvas id="chartScatter"></canvas>
+  </section>
+
+  <section class="correlation">
+    <h2>📈 Correlação</h2>
+    <p id="correlationResult">Correlação será exibida aqui.</p>
+  </section>
+
+  <section class="images">
+    <h2>🖼️ Espaço para Evidências</h2>
+    <div class="img-box">
+      <p>Clique ou arraste uma imagem para inserir evidências.</p>
+      <input type="file" accept="image/*" multiple />
+    </div>
+  </section>
+
+  <footer>
+    <p>Desenvolvido para acompanhamento de indicadores — Segurança do Trabalho © 2025</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
